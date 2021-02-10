@@ -1,0 +1,30 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+        
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["."],
+                "alias": {
+                    "@src": "./src/",
+                    "@screen": "./src/screen/",
+                    "@atom": "./src/components/atom/",
+                    "@molecule": "./src/components/molecule/",
+                    "@theme": "./src/theme/",
+                    "@assets": "./src/assets/",
+                    "@uploads": "./public/uploads/"
+                }
+            }
+        ],
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "regenerator": true
+            }
+        ]
+    ]
+}
